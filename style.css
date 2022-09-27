@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+body {
+	font-family: "Outfit", sans-serif;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(217, 54%, 11%);
+	font-size: 1em;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+main.container {
+	display: flex;
+	gap: 1.5em;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+	max-width: 320px;
+	padding: 16px;
+	margin: 24px;
+	border-radius: 20px;
+	background-color: hsl(216, 50%, 16%);
+}
+
+div.image {
+	display: block;
+	margin: auto;
+	overflow: hidden;
+	max-width: 100%;
+	border-radius: 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.img-hover {
+	position: absolute;
+	opacity: 0;
+	display: flex;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(images/icon-view.svg) no-repeat center;
+	background-color: hsla(178, 100%, 50%, 0.2);
+	transition: ease-in-out 0.5s;
+}
+
+.img-hover:hover {
+	opacity: 1;
+}
+
+/*Targets all direct child from .img-hover*/
+.img-hover > * {
+	transform: scale(10%);
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: 600;
+	color: hsl(0, 0%, 100%);
+	width: 210px;
+	transition: ease-out 0.5s;
+}
+
+h1:hover {
+	color: hsl(178, 100%, 50%);
+	cursor: pointer;
+	transition: ease-in-out 0.5s;
+}
+
+p {
+	color: hsl(215, 51%, 70%);
+	font-weight: 300;
+}
+
+.eth {
+	display: flex;
+	justify-content: space-between;
+}
+
+.icon {
+	color: hsl(178, 100%, 50%);
+	text-align: center;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.icon img {
+	width: auto;
+	height: 1em;
+	align-self: center;
+	margin-right: 0.3em;
+}
+
+p.icon,
+p.author {
+	text-align: center;
+	display: flex;
+	flex-wrap: nowrap;
+	color: hsl(215, 51%, 70%);
+}
+
+.author {
+	position: relative;
+}
+
+.author img {
+	width: auto;
+	height: 1.7em;
+	align-self: center;
+	margin-right: 0.8em;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+
+.author::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -10px;
+	width: 100%;
+	height: 1px;
+	background-color: hsl(215, 32%, 27%);
+}
+
+span#author {
+	margin-left: 0.3em;
+	transition: ease-out 0.5s;
+}
+
+span#author:hover {
+	cursor: pointer;
+	color: hsl(178, 100%, 50%);
+	transition: ease-in 0.5s;
+}
