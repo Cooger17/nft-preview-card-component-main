@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/nft-preview-card-using-flexbox-with-custom-transition-pnKKERODpO)
+- Live Site URL: [live site](https://cooger17.github.io/nft-preview-card-component-main/)
 
 ## My process
 
